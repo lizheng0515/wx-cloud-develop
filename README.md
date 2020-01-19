@@ -12,4 +12,4 @@
 
 ## 演示效果
 
-![演示效果]('http://github.com/lizheng0515/wx-cloud-develop/blob/master/miniprogram/images/wx_cloud_md.gif')
+![演示效果]('https://user-gold-cdn.xitu.io/2020/1/13/16f9cdc29feb5adf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1')
