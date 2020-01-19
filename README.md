@@ -10,3 +10,6 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+## 演示效果
+
+！[演示效果]('./miniprogram/images/wx_cloud_md.gif')
