@@ -12,4 +12,4 @@
 
 ## 演示效果
 
-！[演示效果]('./miniprogram/images/wx_cloud_md.gif')
+![演示效果]('./miniprogram/images/wx_cloud_md.gif')
