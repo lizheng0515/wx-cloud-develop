@@ -1,0 +1,37 @@
+
+<!--template/template.wxml-->
+<template name="tem">
+  <view class='tab_box'>
+    <view class='tab_tab'>
+      <block wx:for="{{tab}}">
+        <view class='{{item.bar==true?"tab_border":""}}' bindtap='tab_change' data-tab_index="{{index}}">{{item.status}}</view>
+      </block>
+    </view>
+    <view class='tab_swiper'>
+      <swiper current="{{index}}" bindchange="swiperChange">
+        <swiper-item wx:for="{{tab}}">
+          <!-- 如果有内容就显示；没有内容显示其他 -->
+          <scroll-view scroll-y='true' wx:if="{{item.content.length>0}}">
+            <!-- swiper循环生成的每一项 可以根据自己需求来换 -->
+            <block wx:for="{{item.content}}" wx:for-item="xitem">
+              <view class='item'>
+                <view class='item_left'>
+                  <view>{{xitem.content}}</view>
+                  <view class='gray'>{{xitem.time}}</view>
+                </view>
+                <view class='item_right'>{{xitem.orderStatus}}</view>
+              </view>
+            </block>
+          </scroll-view>
+          <!-- 有一个轮播无数据就展示这个 -->
+          <view class='box' wx:if="{{item.content.length==0}}">
+            <image class='img' src='http://etc-app.oss-cn-beijing.aliyuncs.com/image_201905141104052588.png' mode='widthFix'></image>
+            <text class='ttt'>暂无邀请</text>
+            <view class='liji' bindtap='angentShare'>立即邀请</view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+</template>

@@ -1,0 +1,33 @@
+<!--pages/myCode/index/index.wxml-->
+<!-- <text >首页描述demo：</text> -->
+
+<!-- <swiper class="" indicator-dots="true" autoplay="true" interval="5000" duration="800" style="height:220px;">
+  <block wx:for="{{picList}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="aspectFill" bindtap='previewImg' data-previewurl='{{picList}}'
+      data-currenturl='{{item}}'/>
+    </swiper-item>   
+  </block>  
+</swiper> -->
+
+<view>
+  <image class="logo-img" src="../../../images/logo.png"></image>
+  <view class="totalNum">总销售金额：<text>{{totalNum}}</text>  万</view>
+</view>
+
+
+<view style="width:100%;margin-top:10px;">
+  <view class="canvas-cont">
+    <canvas canvas-id="canvas3" disable-scroll="true" class="pieCanvas" ></canvas>
+  </view>
+</view>
+
+
+<view class="index-content">
+  <view class="circle"  bindtap="goDaySale">销售数据分析</view>
+  <view class="circle"  bindtap="goBuildSale">楼栋销售情况</view>
+</view>
+
+<button class="add-data" type="primary" size="mini" open-type="getUserInfo" bindgetuserinfo="goChangeData"  hidden="{{!isEdiRole}}">每日提交数据</button>
+
+

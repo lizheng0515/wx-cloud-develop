@@ -1,0 +1,10 @@
+[
+  {
+    "name": "image",
+    "value": {
+      "operateType": "create",
+      "namespace": "banner",
+      "imgUrl": "build_1.png"
+    }
+  }
+]

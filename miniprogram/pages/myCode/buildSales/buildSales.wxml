@@ -1,0 +1,17 @@
+<!--pages/myCode/buildSales/buildSales.wxml-->
+<!-- <text>楼栋销售情况描述demo：</text> -->
+<swiper class="" indicator-dots="true" autoplay="true" interval="2000" duration="800" style="height:230px;">
+  <block wx:for="{{picList}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="aspectFill" bindtap='previewImg' data-previewurl='{{picList}}'
+      data-currenturl='{{item}}'/>
+    </swiper-item>   
+  </block>  
+</swiper>
+
+
+<view class="build-content">
+  <view class="item-build-btn"  wx:for="{{buildNums}}" bindtap="goBuildDetail" data-id='{{item._id}}' data-name='{{item.buildingName}}' wx:key="index">{{item.buildingName}} </view>
+</view>
+
+

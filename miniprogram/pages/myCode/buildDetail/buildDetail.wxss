@@ -1,0 +1,46 @@
+/* pages/myCode/buildDetail/buildDetail.wxss */
+
+.build-title{
+  padding: 10px 20px;
+}
+.sale_percent{
+  padding: 0 10px;
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #f7efe2;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #e2ca9e;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.status_1{
+  color: #999;
+}
+.status_2{
+  color: rgb(243, 59, 59);
+}

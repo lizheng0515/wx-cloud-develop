@@ -1,0 +1,44 @@
+<!--pages/myCode/saleDetail/saleDetail.wxml-->
+<!-- <text>销售详情：</text> -->
+<view class="nowDetailTitle">{{nowTitle}} - 来访记录</view>
+<view class="sale-detail-cont">
+
+  <view class="item-detail" wx:for="{{detailData}}" wx:key="index">
+    <view class="b-bg-item" wx:if="{{index % 2 == 0}}">
+      <view class="user-name">
+        <view>{{item.adviser}}</view>
+        <text>{{item.tel}}</text>
+        <view style="font-size:12px;color: #999;">{{item.buildingName}} - {{item.roomNumber}}</view>
+      </view>
+      <view class="item-state state_{{item.visitType}}">{{VISIT_TYPE_CODE[item.visitType]}}</view>
+      <view class="item-adv">
+        <view>
+          <view>置业顾问</view>
+          <text class="adv-name">{{item.visitPersonName}}</text>
+        </view>
+        <text>{{item.visitTime}}</text>
+      </view>
+    </view>
+
+    <view wx:else class="w-bg-item">
+      <view class="user-name">
+        <view>{{item.adviser}}</view>
+        <text>{{item.tel}}</text>
+        <view style="font-size:12px;color: #999;">{{item.buildingName}} - {{item.roomNumber}}</view>
+      </view>
+      <view class="item-state state_{{item.visitType}}">{{VISIT_TYPE_CODE[item.visitType]}}</view>
+      <view class="item-adv">
+        <view>
+          <view>置业顾问</view>
+          <text class="adv-name">{{item.visitPersonName}}</text>
+        </view>
+        <text>{{item.visitTime}}</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view hidden="{{detailData.length}}" style="margin:20px auto;">
+  <image src="../../../images/no_data.jpg" style="width:240px;"></image>
+</view>

@@ -1,0 +1,47 @@
+/* pages/myCode/dailySales/dailySales.wxss */
+page{
+  font-family:"PingFang SC";
+}
+.day-content{
+  margin: 12px 4%;
+  border: 1px solid #e2ca9e;
+  box-shadow: 0 2px 10px 2px #e2ca9e;
+  border-radius: 5px;
+}
+.itme-title{
+  padding: 8px;
+  margin: 5px;
+  font-size: 14px;
+  background-color: #f7efe2;
+}
+.item-content{
+  display: inline-block;
+  width: 19.2%;
+  margin: 10px 2.5%;
+  padding: 8px 0;
+  text-align: center;
+  border:1px solid #e2ca9e;
+  border-radius: 5px;
+}
+.item-num{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #e2ca9e;
+}
+.item-name{
+  width: 100%;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.canvas {
+    width: 640px;
+    height: 600px;
+    transform: scale(0.5)
+}

@@ -1,0 +1,55 @@
+/* pages/myCode/changData/changData.wxss */
+.nav-title{
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #e2ca9e;
+}
+.section{
+  height: 50px;
+  line-height: 50px;
+}
+.section text{
+  margin-left: 30px;
+}
+.geekxz-hide{
+  display: none;
+}
+.geekxz-tabbar-content{
+  margin: 10px auto;
+
+}
+.geekxz-tabbar-group{
+  margin-top: 5px;
+  color: #e2ca9e;
+
+}
+.geekxz-tabbar-cell{
+  border: 1px solid #e2ca9e;
+  padding: 10px 30px;
+
+}
+.geekxz-active{
+  background-color: #e2ca9e;
+  color: #fff;
+}
+.geekxz-list-box{
+  margin: 0 15px 10px;
+  /* border: 1px solid #f7efe2; */
+}
+.btn-area{
+  margin: 0 auto;
+  text-align: center;
+}
+.submit-btns{
+  display: inline-block;
+  margin-top: 40px;
+}
+button[disabled][type='primary']{
+  border: 1px solid #ccc;
+}
+.edi-title{
+  color: #333;
+  margin-top: 20px;
+  padding-left: 20px;
+}

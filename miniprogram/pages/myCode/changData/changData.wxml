@@ -1,0 +1,142 @@
+<!--pages/myCode/changData/changData.wxml-->
+
+<view class="geekxz-tabbar-content">
+  <view class="geekxz-tabbar-group">
+    <text data-id="0" bindtap="changeTabbar" class="geekxz-tabbar-cell {{indexTab == 0 ? 'geekxz-active' : ''}}">新增来访信息</text>
+    <text data-id="1" bindtap="changeTabbar" class="geekxz-tabbar-cell {{indexTab == 1 ? 'geekxz-active' : ''}}">编辑房号信息</text>
+  </view>
+</view>
+<!-- <view class="nav-title">{{formType}}</view> -->
+<view class="geekxz-list-box {{indexTab == 0 ? '' : 'geekxz-hide'}}">
+  <!-- <view class="geekxz-list-box "> -->
+  <form bindsubmit="formSubmit">
+
+    <!-- 选择时间 -->
+    <view class="section">
+      <!-- <view class="section__title">日期选择：</view> -->
+      <picker name="visitTime" mode="date" value="{{visitTime}}" start="2019-01-01" end="2024-12-31" bindchange="bindDateChange">
+        <text  style="font-size:16px;color:#333;">请选择日期:</text>
+        <text>{{visitTime}}</text>
+        <!-- <input value="{{date}}" placeholder="请选择日期" /> -->
+      </picker>
+    </view>
+    
+    <view class="section">
+      <picker mode = "selector" name="buildingId" bindchange="buildPickerChanges" value="{{bulidArray[buildingNum]._id}}" range="{{bulidArray}}" range-key="{{'buildingName'}}">
+        <text  style="font-size:16px;color:#333;">请选择楼栋:</text>
+        <text> {{bulidArray[buildingNum].buildingName}}</text>
+      </picker>
+    </view>
+
+    <view class="section">
+      <picker name="visitType" bindchange="bindPickerChange" value="{{visitType}}" range="{{typeArray}}">
+        <text  style="font-size:16px;color:#333;">请选择类型:</text>
+        <text>{{typeArray[visitType]}}</text>
+      </picker>
+    </view>
+
+    <view class="section">
+      <picker  mode = "selector" name="roomId" bindchange="roomPickerChanges" value="{{roomArray[roomNum]._id}}" range="{{roomArray}}" range-key="{{'roomNumber'}}">
+        <text  style="font-size:16px;color:#333;">请选择房号:</text>
+        <text> {{roomArray[roomNum].roomNumber}}</text>
+      </picker>
+    </view>
+
+    <view class="weui-form__control-area" style="margin:20px 0;">
+
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells weui-cells_form">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <label class="weui-label" style="font-size:16px;color:#333;">客户姓名：</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" name='adviser' value='{{form.adviser}}' placeholder="请填写客户姓名" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells weui-cells_form">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <label class="weui-label" style="font-size:16px;color:#333;">手机号码：</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" name='tel' type='number' value='{{form.tel}}' placeholder="请填写客户手机号" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells weui-cells_form">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <label class="weui-label" style="font-size:16px;color:#333;">销售顾问：</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" name='visitPersonName' value='{{form.visitPersonName}}' placeholder="请填写销售姓名" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view hidden="{{!isContract}}">
+
+        <view class="weui-cells__group weui-cells__group_form">
+          <view class="weui-cells weui-cells_form">
+            <view class="weui-cell">
+              <view class="weui-cell__hd">
+                <label class="weui-label" style="font-size:16px;color:#333;">签约金额（万元）：</label>
+              </view>
+              <view class="weui-cell__bd">
+                <input class="weui-input" name='signMoney' type='number' value='{{form.signMoney}}' placeholder="请填写签约金额" />
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+
+
+    <view class="btn-area">
+      <button class="weui-btn submit-btns" type="primary" formType="submit" disabled="{{!hasSubmit}}">提交</button>
+      <button class="weui-btn" type="primary" form-type='reset' size="mini" style="margin-left: 20px;font-size:14px;">重置</button>
+    </view>
+  </form>
+
+</view>
+
+<view class="geekxz-list-box {{indexTab == 1 ? '' : 'geekxz-hide'}}">
+  <form bindsubmit="ediFormSubmit">
+  <view class="edi-title"># {{roomDatas.buildingName}} - {{roomDatas.roomNumber}}房间</view>
+    <view class="section">
+      <picker name="status" bindchange="statusPickerChanges" value="{{roomDatas.status}}" range="{{statusArray}}">
+        <text  style="font-size:16px;color:#333;">请选择状态:</text>
+        <text> {{statusArray[roomDatas.status]}}</text>
+      </picker>
+    </view>
+
+    <view class="weui-cells__group weui-cells__group_form">
+      <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <label class="weui-label" style="font-size:16px;color:#333;">签约金额（万元）：</label>
+          </view>
+          <view class="weui-cell__bd">
+ <input class="weui-input" name='soldMoney' type='number' value='{{ediSignMoney}}' placeholder="请填写金额" disabled="{{roomDatas.status<2}}"/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="btn-area">
+      <button class="weui-btn submit-btns" type="primary" formType="submit" disabled="{{isDisabled}}">提交</button>
+    </view>
+
+  </form>
+
+</view>

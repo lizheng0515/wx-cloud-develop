@@ -1,0 +1,35 @@
+<!--pages/myCode/buildDetail/buildDetail.wxml-->
+<!-- <text>楼栋详情demo：</text> -->
+
+<view class="build-title">
+<text style="font-weight:bold;"># {{buildName}}</text>
+<text class="sale_percent">{{percent}}</text>
+<text>已售金额：{{buildPrice}} 万</text>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">房号</view>
+    <view class="th">出售情况</view>
+    <view class="th " style="min-width:95px;">出售金额(万)</view>
+    <view class="th " hidden="{{!isEdiRole}}">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="index">
+    <view class="tr bg-g" wx:if="{{index % 2 == 1}}">
+      <view class="td">{{item.roomNumber}}</view>
+      <view class="td status_{{item.status}}" >{{statusArray[item.status]}}</view>
+      <view class="td status_{{item.status}}">{{item.soldMoney || '--'}}</view>
+      <view class="td" hidden="{{!isEdiRole}}">
+        <button size="mini" type="primary" bindtap="goAddData" data-index='{{item._id}}' data-buildingId='{{item.buildingId}}' style="font-size: 12px;">编辑</button>
+      </view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.roomNumber}}</view>
+      <view class="td status_{{item.status}}">{{statusArray[item.status]}}</view>
+      <view class="td status_{{item.status}}">{{item.soldMoney || '--'}}</view>
+      <view class="td" hidden="{{!isEdiRole}}">
+        <button size="mini" type="primary" bindtap="goAddData" data-index='{{item._id}}' data-buildingId='{{item.buildingId}}' style="font-size: 12px;">编辑</button>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/myCode/index/index",
+    
+    "pages/myCode/login/login",
+    
+    "pages/myCode/dailySales/dailySales",
+    
+    
+    "pages/myCode/changData/changData",
+    
+    
+    "pages/myCode/buildSales/buildSales",
+    "pages/myCode/buildDetail/buildDetail",
+    "pages/myCode/saleDetail/saleDetail",
+
+    "pages/index/index"
+
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "大集天成销控",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"default"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

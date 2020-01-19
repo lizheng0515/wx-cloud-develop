@@ -1,0 +1,10 @@
+<!--pages/myCode/login/login.wxml-->
+
+<image src="{{login}}"></image>
+
+<!-- <button class="btn-login" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">我要登录</button> -->
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="btn-login" type="primary">内部人员登录</button>
+<view class="explain-icon">* 注：涉及公司内部销控信息，仅供大集天成内部人员使用。</view>
+<view class="weui-footer footer-cont">
+  <view class="weui-footer__text">Copyright © 2020-present 大集天成</view>
+</view>

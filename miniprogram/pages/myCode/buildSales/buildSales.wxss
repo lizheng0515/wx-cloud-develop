@@ -1,0 +1,17 @@
+/* pages/myCode/buildSales/buildSales.wxss */
+image{
+  width: 100%;
+}
+.build-content{
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.item-build-btn{
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 8px 18px;
+  border: 1px solid #e2ca9e;
+  border-radius: 5px;
+  text-align: center;
+}

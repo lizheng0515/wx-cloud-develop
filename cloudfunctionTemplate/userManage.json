@@ -1,0 +1,13 @@
+[
+  {
+    "name": "manager",
+    "value": {
+      "operateType": "query",
+      "secretData": {
+        "data": {
+          "purePhoneNumber": "18312482522"
+        }
+      }
+    }
+  }
+]

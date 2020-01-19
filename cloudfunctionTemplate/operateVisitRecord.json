@@ -1,0 +1,30 @@
+[
+  {
+    "name": "record",
+    "value": {
+      "operateType": "create",
+      "tel": "133xxxxxxxx",
+      "visitPersonName": "张先生",
+      "visitTime": "2019/01/08",
+      "visitType": 1,
+      "adviser": "张三",
+      "signMoney": "40万",
+      "openId": "oOY585Qx8SlVrajhYLPwyTDWBzWg",
+      "visitRooms": [
+        {
+          "roomId": "0b7f56b65e0f4b5900349d6127d9a4c0",
+          "buildingId": "90bc5ee75e0f43ef00318efb6bb60fb8"
+        }
+      ]
+    }
+  },
+  {
+    "name": "record-query",
+    "value": {
+      "operateType": "query",
+      "queryRange": [
+        1
+      ]
+    }
+  }
+]

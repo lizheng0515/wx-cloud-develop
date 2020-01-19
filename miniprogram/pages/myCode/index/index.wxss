@@ -1,0 +1,53 @@
+/* pages/myCode/index/index.wxss */
+.logo-img{
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+.totalNum{
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 12px;
+  vertical-align: top;
+}
+.totalNum text{
+  color: green;
+  font-size: 20px;
+}
+.index-content{
+  margin: 30px auto 0;
+}
+.slide-image{
+  width: 100%;
+}
+.circle{
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  /* margin-bottom: 20px; */
+  margin: 0 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #e2ca9e;
+}
+
+/* 例如设计图尺寸为320 x 300 */
+.pieCanvas {
+    width: 100%;
+    height: 400px;
+}
+.canvas-cont{
+  width: 625px;
+  overflow: scroll;
+}
+
+.add-data{
+  padding: .5em 1em;
+  margin-top: 20px;
+  font-size: 12px;
+}

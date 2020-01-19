@@ -1,0 +1,63 @@
+<!--pages/myCode/dailySales/dailySales.wxml-->
+<!-- <text>日销售数据描述demo：</text> -->
+<!-- 此处该优化，我偷懒了 -->
+<view class="itme-title">总计：</view>
+<view  class="day-content">
+  <view class="item-content" bindtap="goSaleDetail" data-time="[10]" data-type="0">
+    <view class="item-num">{{total.reception}}人</view>
+    <view class="item-name">总计接待</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[10]" data-type="1">
+    <view class="item-num">{{total.raise}}人</view>
+    <view class="item-name">总计认筹</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[10]" data-type="2">
+    <view class="item-num">{{total.subscription}}人</view>
+    <view class="item-name">总计认购</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[10]" data-type="3">
+    <view class="item-num">{{total.signing}}人</view>
+    <view class="item-name">总计签约</view>
+  </view>
+</view>
+
+<view class="itme-title">本周：</view>
+<view  class="day-content">
+  <view class="item-content" bindtap="goSaleDetail" data-time="[2]" data-type="0">
+    <view class="item-num">{{week.reception}}人</view>
+    <view class="item-name">本周接待</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[2]" data-type="1">
+    <view class="item-num">{{week.raise}}人</view>
+    <view class="item-name">本周认筹</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[2]" data-type="2">
+    <view class="item-num">{{week.subscription}}人</view>
+    <view class="item-name">本周认购</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[2]" data-type="3">
+    <view class="item-num">{{week.signing}}人</view>
+    <view class="item-name">本周签约</view>
+  </view>
+</view>
+
+<view class="itme-title">今日：</view>
+<view  class="day-content" >
+  <view class="item-content" bindtap="goSaleDetail" data-time="[1]" data-type="0">
+    <view class="item-num">{{today.reception}}人</view>
+    <view class="item-name">今日接待</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[1]" data-type="1">
+    <view class="item-num">{{today.raise}}人</view>
+    <view class="item-name">今日认筹</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[1]" data-type="2">
+    <view class="item-num">{{today.subscription}}人</view>
+    <view class="item-name">今日认购</view>
+  </view>
+   <view class="item-content" bindtap="goSaleDetail" data-time="[1]" data-type="3">
+    <view class="item-num">{{today.signing}}人</view>
+    <view class="item-name">今日签约</view>
+  </view>
+</view> 
+

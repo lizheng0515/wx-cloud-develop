@@ -1,0 +1,88 @@
+/*template.wxss */
+/* 无数据展示的 */
+swiper {
+  height: 536rpx;
+  background-color: white;
+  margin-top: 1rpx;
+}
+.img {
+  width: 219rpx;
+	height: 223rpx;
+  margin: 0 auto;
+  display: block;
+}
+.liji {
+  width: 284rpx;
+	height: 65rpx;
+	background-image: linear-gradient(90deg, 
+		#ffc366 0%, 
+		#fe8f61 100%);
+	border-radius: 33rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 65rpx;
+}
+.box {
+  text-align: center;
+}
+.ttt {
+  display: block;
+  margin: 30rpx auto;
+}
+scroll-view {
+  height: 536rpx
+}
+
+/* tab */
+
+
+.tab_tab {
+  height: 70rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin-bottom: 1rpx;
+    line-height: 70rpx;
+}
+.tab_border {
+  border-bottom: 1rpx solid green;
+  height: 100%;
+
+}
+.tab_swiper {
+  height: 540rpx;
+}
+swiper {
+  border: 0;
+  margin: 0;
+  height: 100%;
+}
+.item {
+  box-sizing: border-box;
+  margin: 10rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.item_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+scroll-view {
+  height: 540rpx;
+}
+.box {
+  text-align: center;
+}
+.ttt {
+  display: block;
+  margin: 30rpx auto;
+}
+.gray {
+    color: gray;
+}
+.item_right {
+  color: red;
+}
